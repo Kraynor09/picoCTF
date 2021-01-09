@@ -21,12 +21,14 @@ Logon
 
 Where are the robots? 
 
+
 Very simple CTF, firstly start of by trying to find sercert files on the webserver, this could be done by entering things that may relate to the webpage for exmaple, /robots.txt. After finding this, you should notice the "Disallow: /1bb4c.html" this shows to the user that the web developers are not wanting there clietns to go to this html page. When you open the html page you get the flag.
 
 picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c}
 
 
 Web Gauntlet 
+In the challange you are required to login as "admin"
 
 First i started of by testing how the login page works, i have noticed that it takes the user input from the "username" and "password" feild and places each into a sql qeury, that sql qeury is then displayed to the user. This could be very usefull for a attack, for exmaple, we now know were each codentail is stored, the users usernames are stored in the "users" table and the passwords are stored in the same table.
 lets take a look at the other url that we have been given, here we get "round1: or", or in sql is used to join  to booleans togther, to return a true or false value.
