@@ -30,5 +30,9 @@ picoCTF{ca1cu1at1ng_Mach1n3s_1bb4c}
 Web Gauntlet 
 In the challange you are required to login as "admin"
 
+part 1
+
 First i started of by testing how the login page works, i have noticed that it takes the user input from the "username" and "password" feild and places each into a sql qeury, that sql qeury is then displayed to the user. This could be very usefull for a attack, for exmaple, we now know were each codentail is stored, the users usernames are stored in the "users" table and the passwords are stored in the same table.
-lets take a look at the other url that we have been given, here we get "round1: or", or in sql is used to join  to booleans togther, to return a true or false value.
+lets take a look at the other url that we have been given, here we get "round1: or", or in sql is used to join  to booleans togther, to return a true or false value. This means that we can not use a or statment in our query. If you think of the standered sql query that we can input "SELECT  * FROM users WHERE username = 'admin' AND password= 'admin' " We need to make it so that the "AND password = 'admin'" is not included in out statment, we do this by entering the username 'admin' followed by a ';--' what this does is it declears that it is the end of the sql statment. So the stament would now look somthing like this "SELECT * FROM users WHERE username= 'admin';--". If we take the last part and enter that in our username box, and enter a random password, we then are placed on part2.
+
+part2 
